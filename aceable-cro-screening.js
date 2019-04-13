@@ -1,3 +1,5 @@
+// ****** NOT FINISHED ***** 
+
 // 1: how could you improve the following code?
 // Assume that you have access to a styles.css file
 $(document).ready(function() {
@@ -48,7 +50,7 @@ $(document).ready(function() {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.slim.min.js"></script>
 
   // using jQuery, select the 4th Div and add some content by the append function.
-  
+
   $('.element:nth-child(4)').append('<p>Injected content</p>'));
 
 </head>
