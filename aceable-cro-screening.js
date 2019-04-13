@@ -40,6 +40,18 @@ $(document).ready(function() {
 
 // Answer
 
+<head>
+
+  // My script runs here!
+  // For this, I would go the fastest, shortest route and slap some jQuery in.
+  // Load in the latest min version of jQuery
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.slim.min.js"></script>
+
+  // using jQuery, select the 4th Div and add some content by the append function.
+  
+  $('.element:nth-child(4)').append('<p>Injected content</p>'));
+
+</head>
 
 
 
@@ -120,3 +132,7 @@ for (var i = 0; i <= 5; i++) {
 console.log('The next five days are ', dates.join(', '));
 
 // Answer
+
+// Looks great, the logic is faulty simply because when using getMonth(), the index starts at 0.
+// So January is 0. By adding + 1 you will get the correct month
+var month = date.getMonth() + 1;
