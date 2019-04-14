@@ -16,9 +16,24 @@ $(document).ready(function() {
 
 // * Answer
 
+// I would simply change the CSS file's styles
+.foo #bar {
+  color: red;
+  border: 1px solid blue;
+  width: 100px;
+}
 
+$(document).ready(function() {
+  // set variable to avoid repititveness
+  var elem = $('.foo #bar');
 
-
+  elem.text('new text!');
+  elem.click( function() {
+    $(this).attr('title', 'new title');
+  })
+  
+  elem.click();
+});
 
 
 
