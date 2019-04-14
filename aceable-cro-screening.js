@@ -85,7 +85,13 @@ $(document).ready(function() {
 
 // * Answer
 
+// this one through me for a loop aka a forLoop. get it? 
+// After some more research on ES6, i used a for loop to insert array items to avoid repititeveness
+var list = ['foo', 'bar', 'baz', 'bop'];
 
+list.forEach(function (i) {
+  dojo.query('li.${i} a').attr('title', 'i am ${i}');
+});
 
 
 
