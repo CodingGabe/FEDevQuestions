@@ -1,5 +1,3 @@
-// ****** NOT FINISHED ***** 
-
 // 1: how could you improve the following code?
 // Assume that you have access to a styles.css file
 $(document).ready(function() {
@@ -136,8 +134,29 @@ var menuItems = [
 
 // * Answer
 
+(function () {
+  // Another tough one as I am not the best jQuery Dev
+  // Using jQuery, I created an empty array to start which will be called produced the food
+  food = [];
 
+  // Looping through the menu objects, I need to create a string of each item and push it to the array
+  menuItems.forEach(function (item) {
+    // Using OOP, get the name of each item and assign variable
+    var itemString = item.name;
+    // check to see if any items have extras
+    // using jQuery's .map is super clutch in this issue as it applies a function to each object and maps results into a new array
+    if (item.extras) {
+      extras = item.extras.map(function (extra) { return " " + extra });
+      // apply parentheses like the example
+      itemString += " (" + extras + ")";
+    }
+    // push menuItems into the empty array
+    food.push(itemString);
+  });
 
+  return food;
+
+})(); 
 
 
 
